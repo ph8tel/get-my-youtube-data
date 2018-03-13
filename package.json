@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/ph8tel/get-my-youtube-data/issues"
   },
-  "homepage": "https://github.com/ph8tel/get-my-youtube-data#readme"
+  "homepage": "https://github.com/ph8tel/get-my-youtube-data#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }
