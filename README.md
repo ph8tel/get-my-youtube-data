@@ -1,7 +1,7 @@
-#Welcome to get-my-youtube-data!
-##This is a simple npde helper to get all of a user's data from the youtube API
+# Welcome to get-my-youtube-data!
+## This is a simple npde helper to get all of a user's data from the youtube API
 
-##What you will need:
+##W hat you will need:
 * node 7.4 or higher
   To use async await
 * axios
@@ -9,7 +9,7 @@
 * youtube api key
 ```https://developers.google.com/youtube/v3/getting-started```
 
-##How it works:
+## How it works:
 
 ```const getYouTubeData = require('get-my-youtube-data');
 
@@ -31,6 +31,6 @@ let playlistVideos = await getYouTubeData.gimmePlaylist(<playlist-ID>, <yourAPIk
 console.log('all videos for playlist', <playlist-ID>, 'are: ', playlistVideos)
 ```
 ## Also:
-* getPlaylists(<channel-ID>, <yourAPIkey>)
-* getChannelInfo(<channel-id>, <yourAPIkey>)
+* ```getPlaylists(<channel-ID>, <yourAPIkey>)```
+* ```getChannelInfo(<channel-id>, <yourAPIkey>)```
 These return promises.
