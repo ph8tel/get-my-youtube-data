@@ -1,0 +1,26 @@
+{
+  "name": "get-my-youtube-data",
+  "version": "1.0.0",
+  "description": "YouTube API helper to fetch user data",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ph8tel/get-my-youtube-data.git"
+  },
+  "keywords": [
+    "youtube",
+    "node",
+    "API",
+    "search",
+    "helper"
+  ],
+  "author": "Joe Jackson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ph8tel/get-my-youtube-data/issues"
+  },
+  "homepage": "https://github.com/ph8tel/get-my-youtube-data#readme"
+}
