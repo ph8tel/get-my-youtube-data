@@ -15,13 +15,24 @@
 const getYouTubeData = require('get-my-youtube-data');
 ```
 * get comments and video for a specific user
+This is where you should start. It will crawl the youtube API and get all of the data you want.
 ```
 let allResults = await getYouTubeData.gimmeAll( <youtubeUserID>, <yourAPIkey>)
 
 console.log('all videos for user', 
 <youtubeUserId>, 'are: ', allResults)
 ```
+this is what the results will look like:
+```
+allResults = {
+  videos: [array of video objects],
+  comments: [array of comment objects],
+  uploadsPlaylist: "playlist ID string to get all videos,
+  userId: "user ID string
+}
+```
 * get videos for a specific channel
+The channelId is usually the same as the userId. Unless the user has multiple channels
 ```
 let channelVideos = await 
 getYouTubeData.gimmeVideos(<channel-ID>, <yourAPIkey>)
