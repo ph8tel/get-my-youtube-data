@@ -23,7 +23,7 @@ module.exports = youtubeLogic = {
                 })
                 resolve(playlists.data.items)
             }).catch(err => {
-                console.log('lists catch ran error')
+                console.log('lists catch ran error', err.message)
                 resolve(err)
             })
 
@@ -53,7 +53,7 @@ module.exports = youtubeLogic = {
                 })
                 resolve(formattedVideos)
             }).catch(err => {
-                console.log('catch in get uploaded')
+                console.log('catch in get uploaded', err.message)
                 resolve(err)
             })
         })
@@ -74,7 +74,8 @@ module.exports = youtubeLogic = {
         })
     },
     gimmeVideos: async function(chanID, API_KEY) {
-        let videos = await this.getUploadedVideos(chanID, API_KEY)
+        let uploadsId = 'UU' + chanID.slice(2)
+        let videos = await this.getUploadedVideos(uploadsId, API_KEY)
         return videos
     },
     gimmeComments: async function(chanID, API_KEY) {
@@ -87,7 +88,6 @@ module.exports = youtubeLogic = {
     },
     gimmeAll: async function(userID, API_KEY) {
         let channelInfo = await this.getChannelInfo(userID, API_KEY)
-            // console.log('info is', channelInfo.data)
         if (channelInfo.data.items.length) {
             let uploadsID = channelInfo.data.items[0].contentDetails.relatedPlaylists.uploads;
             let channelId = channelInfo.data.items[0].id
