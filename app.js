@@ -1,12 +1,12 @@
 var axios = require('axios')
 
 module.exports = youtubeLogic = {
-    getPlaylists: function(chanID, API_KEY) {
+    getPlaylists: function(playlistId, API_KEY) {
 
         return new Promise(resolve => {
             axios.get('https://www.googleapis.com/youtube/v3/playlistItems', {
                 params: {
-                    playlistId: chanID,
+                    playlistId: playlistId,
                     maxResults: '50',
                     part: 'snippet,contentDetails',
                     key: API_KEY
@@ -82,8 +82,8 @@ module.exports = youtubeLogic = {
         let commentObjects = await this.getComments(chanID, API_KEY)
         return commentObjects
     },
-    gimmePlaylist: async function(uploadsID, API_KEY) {
-        let videoObjects = await this.getPlaylists(uploadsID, API_KEY)
+    gimmePlaylist: async function(playlistId, API_KEY) {
+        let videoObjects = await this.getPlaylists(playlistId, API_KEY)
         return videoObjects
     },
     gimmeAll: async function(userID, API_KEY) {

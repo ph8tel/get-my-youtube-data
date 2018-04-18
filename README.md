@@ -37,7 +37,7 @@ The channelId is usually the same as the userId. Unless the user has multiple ch
 let channelVideos = await 
 getYouTubeData.gimmeVideos(<channel-ID>, <yourAPIkey>)
 
-console.log('all videos for channel', <channel-ID>, 'are: ', channelVideos)
+console.log('all videos for channel', <uploads-ID>, 'are: ', channelVideos)
 ```
 * get all comments for a channel
 ```
