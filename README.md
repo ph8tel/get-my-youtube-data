@@ -4,12 +4,23 @@
 ## What you will need:
 * node 7.4 or higher
   To use async await
+
 * axios
 ```npm install axios --save```
-* youtube api key
-```https://developers.google.com/youtube/v3/getting-started```
+
+* youtube API key
+[Tutorial](https://developers.google.com/youtube/v3/getting-started)
+ put this API key somewhere safe. Do not publish it to github or deploy it. Bad things can happen. 
+* your youtube id
+
+Sign in to your YouTube account.
+In the top right, click your account icon > settings .
+Next to your profile photo, click Advanced.
+You'll see your channel's user and channel IDs under "Account information."
 
 ## How it works:
+[video Tutorial](https://youtu.be/03W_e71rsNk)
+
 * add the package
 ```
 const getYouTubeData = require('get-my-youtube-data');
@@ -33,6 +44,7 @@ allResults = {
 ```
 * get videos for a specific channel
 The channelId is usually the same as the userId. Unless the user has multiple channels
+
 ```
 let channelVideos = await 
 getYouTubeData.gimmeVideos(<channel-ID>, <yourAPIkey>)
@@ -46,6 +58,9 @@ let channelComments = await getYouTubeData.gimmeComments(<channel-ID>, <yourAPIk
 console.log('all comments for channel', <channel-ID>, 'are: ', channelComments)
 ```
 * get all videos for a specific playlist (use uploads to get all)
+Every user has an "uploads" playlist. This playlist is made of every uploaded video.
+This id is usually similar to your user id. Your user id can start with "UC...", your uplods
+playlist can be the same, except it starts with "UU..."
 ```
 let playlistVideos = await getYouTubeData.gimmePlaylist(<playlist-ID>, <yourAPIkey>)
 
