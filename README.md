@@ -1,5 +1,5 @@
 # Welcome to get-my-youtube-data!
-## This is a simple npde helper to get all of a user's data from the youtube API
+## This is a simple node helper to get all of a user's data from the youtube API
 
 ## What you will need:
 * node 7.4 or higher
