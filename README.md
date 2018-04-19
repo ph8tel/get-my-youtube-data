@@ -10,8 +10,9 @@
 
 * You Tube API key
   * [Tutorial](https://developers.google.com/youtube/v3/getting-started)
+
  put this API key somewhere safe. Do not publish it to github or deploy it. Bad things can happen. 
-* your You Tube id
+* Your You Tube id
 
   1. Sign in to your You Tube account.
   2. In the top right, click your account icon > settings .
