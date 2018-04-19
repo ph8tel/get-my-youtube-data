@@ -31,7 +31,7 @@ This is where you should start. It will crawl the You Tube API and get all of th
 ```
 let allResults = await getYouTubeData.gimmeAll( <youtubeUserID>, <yourAPIkey>)
 
-console.log('all videos for user', 
+console.log('all data for user', 
 <youtubeUserId>, 'are: ', allResults)
 ```
 this is what the results will look like:
