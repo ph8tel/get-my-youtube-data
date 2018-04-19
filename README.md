@@ -59,8 +59,9 @@ let channelComments = await getYouTubeData.gimmeComments(<channel-ID>, <yourAPIk
 console.log('all comments for channel', <channel-ID>, 'are: ', channelComments)
 ```
 * get all videos for a specific playlist (use uploads to get all)
+
 Every user has an "uploads" playlist. This playlist is made of every uploaded video.
-This id is usually similar to your user id. Your user id can start with "UC...", your uplods
+This id is usually similar to your user id. Your user id can start with "UC...", your uploads
 playlist can be the same, except it starts with "UU..."
 ```
 let playlistVideos = await getYouTubeData.gimmePlaylist(<playlist-ID>, <yourAPIkey>)
