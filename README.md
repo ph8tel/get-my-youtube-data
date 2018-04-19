@@ -8,15 +8,15 @@
 * axios
 ```npm install axios --save```
 
-* youtube API key
-[Tutorial](https://developers.google.com/youtube/v3/getting-started)
+* You Tube API key
+  * [Tutorial](https://developers.google.com/youtube/v3/getting-started)
  put this API key somewhere safe. Do not publish it to github or deploy it. Bad things can happen. 
-* your youtube id
+* your You Tube id
 
-Sign in to your YouTube account.
-In the top right, click your account icon > settings .
-Next to your profile photo, click Advanced.
-You'll see your channel's user and channel IDs under "Account information."
+  1. Sign in to your You Tube account.
+  2. In the top right, click your account icon > settings .
+  3. Next to your profile photo, click Advanced.
+  4. You'll see your channel's user and channel IDs under "Account information."
 
 ## How it works:
 [video Tutorial](https://youtu.be/03W_e71rsNk)
@@ -26,7 +26,7 @@ You'll see your channel's user and channel IDs under "Account information."
 const getYouTubeData = require('get-my-youtube-data');
 ```
 * get comments and video for a specific user
-This is where you should start. It will crawl the youtube API and get all of the data you want.
+This is where you should start. It will crawl the You Tube API and get all of the data you want.
 ```
 let allResults = await getYouTubeData.gimmeAll( <youtubeUserID>, <yourAPIkey>)
 
