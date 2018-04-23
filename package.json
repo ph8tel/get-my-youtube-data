@@ -1,6 +1,6 @@
 {
     "name": "get-my-youtube-data",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "YouTube API helper to fetch user data",
     "main": "index.js",
     "scripts": {
