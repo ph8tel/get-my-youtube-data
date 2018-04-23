@@ -28,6 +28,7 @@ const getYouTubeData = require('get-my-youtube-data');
 ```
 * get comments and video for a specific user
 This is where you should start. It will crawl the You Tube API and get all of the data you want.
+
 ```
 let allResults = await getYouTubeData.gimmeAll( <youtubeUserID>, <yourAPIkey>)
 
@@ -43,6 +44,22 @@ allResults = {
   userId: "user ID string
 }
 ```
+* New for 2.1.0
+
+ * Reply to comment
+ This one requires OAuth2. Not that hard to do. I made a tutorial for it if you need one. 
+
+click (here)[##sample-response] for sample response object for post.
+ ```
+let sentStatus = getYouTubeData.replyToComment(commentId, chanId, parentId, commentText, accessToken, refresh_token, <your youtube app ID>, <your youtube app secret> )
+if ( !sentStatus  ) {
+  console.log('Comment failed to post')
+}
+
+console.log( 'Comment posted. Response object is:', sentStatus )
+```
+
+
 * get videos for a specific channel
 The channelId is usually the same as the userId. Unless the user has multiple channels
 
@@ -71,4 +88,30 @@ console.log('all videos for playlist', <playlist-ID>, 'are: ', playlistVideos)
 ## Also:
 * ```getPlaylists(<channel-ID>, <yourAPIkey>)```
 * ```getChannelInfo(<channel-id>, <yourAPIkey>)```
+
 These return promises.
+
+## Sample response for posted comment reply: 
+``` 
+{
+  "kind": "youtube#comment",
+  "etag": "\"ZG3FIn5B5vcHjQiQ9nDOCWdxwWo/zVHAtkB-3JGSE_y_ryQrkha7zv4\"",
+  "id": "UgzVaKGXg9hhW03f9nR4AaABAg.8duZCr1njo98fOZ2O8S56k",
+  "snippet": {
+    "authorDisplayName": "ph8tel",
+    "authorProfileImageUrl": "https://yt3.ggpht.com/-BtWgsj7pclE/AAAAAAAAAAI/AAAAAAAAAAA/114ywxrfdv8/s28-c-k-no-mo-rj-c0xffffff/photo.jpg",
+    "authorChannelUrl": "http://www.youtube.com/channel/UCCooOt2LDAfz-5giM99biUQ",
+    "authorChannelId": {
+      "value": "UCCooOt2LDAfz-5giM99biUQ"
+    },
+    "textDisplay": "Testing automated reply to comment posted by user. -bot",
+    "textOriginal": "Testing automated reply to comment posted by user. -bot",
+    "parentId": "UgzVaKGXg9hhW03f9nR4AaABAg",
+    "canRate": true,
+    "viewerRating": "none",
+    "likeCount": 0,
+    "publishedAt": "2018-04-23T18:15:12.000Z",
+    "updatedAt": "2018-04-23T18:15:12.000Z"
+  }
+}
+```
